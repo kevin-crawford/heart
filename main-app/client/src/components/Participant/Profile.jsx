@@ -5,13 +5,14 @@ import Error from "../UI/Error";
 import "./Profile.scss";
 import getParticipant from "api/getParticipant.api";
 import Citations from "./components/Citations";
+import Status from "./components/UserStatus";
 class ParticipantProfile extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       user: null,
       error: null,
-      loading: true
+      loading: true,
     };
   }
   componentDidMount() {
@@ -45,6 +46,7 @@ class ParticipantProfile extends React.Component {
         <div className="user-profile--content-container">
           <Card user={user} />
           <Citations user={user} />
+          <Status user={user} />
         </div>
       </div>
     );
