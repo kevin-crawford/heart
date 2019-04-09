@@ -1,0 +1,20 @@
+@import 'styles/shared.scss';
+
+.navigation {
+	height: 75px;
+	background-color:#0071db;
+}
+
+.navigation-list {
+	margin: 25px 0px;
+	display: inline-block;
+}
+
+.navigation-list li {
+	margin-right: 55px;
+	list-style-type: none;
+	text-decoration: none;
+	color: #ffffff;
+	display: inline-block;
+	text-transform: uppercase;
+}

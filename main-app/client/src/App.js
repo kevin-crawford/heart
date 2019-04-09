@@ -1,13 +1,16 @@
 import React, { Component } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ParticipantProfile from "./components/Participant/Profile";
+import Navigation from './components/Navigation/Navigation';
 import IntakeForm from "./components/IntakeForm/IntakeForm";
 import "./App.css";
 
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <Router>
+      <div className="container">
+      <Navigation />
         <Switch>
           <Route
             exact={true}
@@ -16,7 +19,8 @@ class App extends Component {
           />
           <Route exact={true} path="/form" component={IntakeForm} />
         </Switch>
-      </BrowserRouter>
+        </div>
+      </Router>
     );
   }
 }
