@@ -17,9 +17,11 @@ const postParticipant = (participant, successFn, errorFn) => {
   // return data from axios POST request to the DB
   //
   return axios
-    .post(`${API_BASE_URL}/participants`, config, {
-      timeout: 3000
-    })
+    .post(
+      `${API_BASE_URL}/participants`,
+      { participant, timeout: 3000 },
+      config
+    )
     .then(res => {
       // set response to a data variable that we destructure to access properties
       // let { data } = res;
